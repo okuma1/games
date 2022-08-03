@@ -1,5 +1,7 @@
 import inquirer
 from forca import forca
+from secretWord import word
+from secretNumber import number
 
 jogo = 0
 
@@ -16,6 +18,10 @@ resposta = inquirer.prompt(questions)
 
 if (resposta['size'] == 'Forca'):
     forca()
+if (resposta['size'] == 'Palavra secreta'):
+    word()
+if (resposta['size'] == 'Numero secreto'):
+    number()
 
 def restart():
     global jogo
